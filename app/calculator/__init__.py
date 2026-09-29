@@ -33,6 +33,8 @@ Usage:
         subtract  : Subtracts the second number from the first.
         multiply  : Multiplies two numbers.
         divide    : Divides the first number by the second.
+        power     : Raises the first number to the power of the second. 
+        modulus   : Returns the remainder after dividing the first number by the second.
 
 Special Commands:
     help      : Display this help message.
@@ -44,6 +46,8 @@ Examples:
     subtract 15.5 3.2
     multiply 7 8
     divide 20 4
+    power 2 3
+    modulus 10 3
     """
     print(help_message)
 
@@ -75,7 +79,7 @@ def calculator() -> None:
 
     # Welcome message to the user
     print("Welcome to the Professional Calculator REPL!")
-    print("Type 'help' for instructions or 'exit' to quit.\n")
+    print("Type 'help' for instructions, 'history' to view history, or 'exit' to quit.\n")
 
     # Continuously prompt the user for input until they decide to exit
     while True:
