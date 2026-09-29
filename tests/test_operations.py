@@ -378,3 +378,22 @@ def test_power_positive():
     # Assert
     assert result == expected_result, f"Expected {a} * {b} to be {expected_result}, got {result}"
 
+def test_modulus_positive():
+    """
+    Test the modulus method with two positive numbers.
+
+    This test verifies that calculating the remainder of two positive numbers
+    returns the correct result.
+    """
+    # Arrange
+    a = 10.0
+    b = 3.0
+    expected_result = 1.0
+
+    # Act
+    result = Operation.modulus(a, b)
+
+    # Assert
+    assert result == expected_result, f"Expected {a} % {b} to be {expected_result}, got {result}"
+
+
