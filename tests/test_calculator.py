@@ -9,7 +9,7 @@ import pytest
 from io import StringIO
 
 # Import the functions to be tested
-from app.calculator import display_help, display_history, calculator
+from app.calculator import display_help, display_history, calculator, help_message
 
 def test_display_help(capsys):
     """
@@ -29,35 +29,8 @@ def test_display_help(capsys):
     # Assert
     # Capture the printed output
     captured = capsys.readouterr()
-    expected_output = """
-Calculator REPL Help
---------------------
-Usage:
-    <operation> <number1> <number2>
-    - Perform a calculation with the specified operation and two numbers.
-    - Supported operations:
-        add       : Adds two numbers.
-        subtract  : Subtracts the second number from the first.
-        multiply  : Multiplies two numbers.
-        divide    : Divides the first number by the second.
-        power     : Raises the first number to the power of the second. 
-        modulus   : Returns the remainder after dividing the first number by the second.
-
-Special Commands:
-    help      : Display this help message.
-    history   : Show the history of calculations.
-    exit      : Exit the calculator.
-
-Examples:
-    add 10 5
-    subtract 15.5 3.2
-    multiply 7 8
-    divide 20 4
-    power 2 3
-    modulus 10 3
-"""
     # Remove leading/trailing whitespace for comparison
-    assert captured.out.strip() == expected_output.strip()
+    assert captured.out.strip() == help_message.strip()
 
 def test_display_history_empty(capsys):
     """

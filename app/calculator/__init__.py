@@ -17,12 +17,7 @@ import readline  # Enables command history and editing features
 from typing import List
 from app.calculation import Calculation, CalculationFactory
 
-
-def display_help() -> None:
-    """
-    Displays the help message with usage instructions and supported operations.
-    """
-    help_message = """
+help_message = """
 Calculator REPL Help
 --------------------
 Usage:
@@ -35,6 +30,7 @@ Usage:
         divide    : Divides the first number by the second.
         power     : Raises the first number to the power of the second. 
         modulus   : Returns the remainder after dividing the first number by the second.
+        average   : Calculates the average of two numbers.
 
 Special Commands:
     help      : Display this help message.
@@ -48,6 +44,12 @@ Examples:
     divide 20 4
     power 2 3
     modulus 10 3
+    average 10 20
+    """
+
+def display_help() -> None:
+    """
+    Displays the help message with usage instructions and supported operations.
     """
     print(help_message)
 
