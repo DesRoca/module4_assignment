@@ -272,3 +272,17 @@ class ModulusCalculation(Calculation):
     def execute(self) -> float:
         # Calls the modulus method from the Operation module to perform the modulus operation.
         return Operation.modulus(self.a, self.b)  # pragma: no cover
+
+@CalculationFactory.register_calculation('average')
+class AverageCalculation(Calculation):
+    """
+    AverageCalculation represents an average operation.
+
+    By encapsulating the average logic here, we achieve a clear separation of
+    concerns, making it easy to adjust the average logic without affecting
+    other calculations.
+    """
+
+    def execute(self) -> float:
+        # Calls the average method from the Operation module to calculate the average.
+        return Operation.average(self.a, self.b)  # pragma: no cover

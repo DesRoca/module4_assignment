@@ -396,4 +396,20 @@ def test_modulus_positive():
     # Assert
     assert result == expected_result, f"Expected {a} % {b} to be {expected_result}, got {result}"
 
+def test_average_positive():
+    """
+    Test the average method with two positive numbers.
 
+    This test verifies that calculating the average of two positive numbers
+    returns the correct result.
+    """
+    # Arrange
+    a = 10.0
+    b = 20.0
+    expected_result = 15.0
+
+    # Act
+    result = Operation.average(a, b)
+
+    # Assert
+    assert result == expected_result, f"Expected the average of {a} and {b} to be {expected_result}, got {result}"

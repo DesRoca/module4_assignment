@@ -177,3 +177,26 @@ class Operation:
         the methods easily reusable in other parts of the program.
       """
       return a % b  # Returns the remainder after dividing a by b.
+
+    @staticmethod
+    def average(a: float, b: float) -> float:
+      """
+      Calculates the average of the first and second floating-point numbers.
+
+      **Parameters:**
+      - `a (float)`: The first number.
+      - `b (float)`: The second number.
+
+      **Returns:**
+      - `float`: The average of the two numbers.
+
+      **Example:**
+      >>> Operation.average(10.0, 20.0)
+      15.0
+
+      **Advantages of Static Methods in Utility Classes:**
+      - Static methods in utility classes like this one provide simple access to functions
+        without requiring an instance of the class. This reduces overhead and makes
+        the methods easily reusable in other parts of the program.
+      """
+      return (a + b) / 2  # Returns the average of the two numbers.
