@@ -24,13 +24,14 @@ Usage:
     <operation> <number1> <number2>
     - Perform a calculation with the specified operation and two numbers.
     - Supported operations:
-        add       : Adds two numbers.
-        subtract  : Subtracts the second number from the first.
-        multiply  : Multiplies two numbers.
-        divide    : Divides the first number by the second.
-        power     : Raises the first number to the power of the second. 
-        modulus   : Returns the remainder after dividing the first number by the second.
-        average   : Calculates the average of two numbers.
+        add        : Adds two numbers.
+        subtract   : Subtracts the second number from the first.
+        multiply   : Multiplies two numbers.
+        divide     : Divides the first number by the second.
+        power      : Raises the first number to the power of the second. 
+        modulus    : Returns the remainder after dividing the first number by the second.
+        average    : Calculates the average of two numbers.
+        percentage : Calculates what percentage the first number is of the second.
 
 Special Commands:
     help      : Display this help message.
@@ -45,6 +46,7 @@ Examples:
     power 2 3
     modulus 10 3
     average 10 20
+    percentage 25 100
     """
 
 def display_help() -> None:

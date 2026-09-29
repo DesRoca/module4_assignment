@@ -413,3 +413,21 @@ def test_average_positive():
 
     # Assert
     assert result == expected_result, f"Expected the average of {a} and {b} to be {expected_result}, got {result}"
+
+def test_percentage_positive():
+    """
+    Test the percentage method with two positive numbers.
+
+    This test verifies that calculating what percentage the first number is
+    of the second number returns the correct result.
+    """
+    # Arrange
+    a = 25.0
+    b = 100.0
+    expected_result = 25.0
+
+    # Act
+    result = Operation.percentage(a, b)
+
+    # Assert
+    assert result == expected_result, f"Expected {a} as a percentage of {b} to be {expected_result}, got {result}"

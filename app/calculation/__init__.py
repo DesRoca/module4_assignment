@@ -286,3 +286,17 @@ class AverageCalculation(Calculation):
     def execute(self) -> float:
         # Calls the average method from the Operation module to calculate the average.
         return Operation.average(self.a, self.b)  # pragma: no cover
+
+@CalculationFactory.register_calculation('percentage')
+class PercentageCalculation(Calculation):
+    """
+    PercentageCalculation represents a percentage operation.
+
+    By encapsulating the percentage logic here, we achieve a clear separation of
+    concerns, making it easy to adjust the percentage logic without affecting
+    other calculations.
+    """
+
+    def execute(self) -> float:
+        # Calls the percentage method from the Operation module to calculate the percentage.
+        return Operation.percentage(self.a, self.b)  # pragma: no cover
